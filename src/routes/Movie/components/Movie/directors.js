@@ -12,8 +12,8 @@ const Directors = React.createClass({
     });
 
     return (
-      <div className="actor directors" id="content">
-        <h3>Actor's Directors</h3>
+      <div className="movie directors" id="content">
+        <h3>The Director(s)</h3>
         <div className="columns">
           <ul>
             {directorListItems}
