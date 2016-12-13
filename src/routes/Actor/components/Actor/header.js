@@ -5,8 +5,7 @@ const Header = React.createClass({
     const {name, gender} = this.props;
     return (
       <div className="actor header">
-        <h2>{name} ({gender})</h2>
-        <h4>Actor Associations</h4>
+        <h1>{name} ({gender})</h1>
       </div>
     );
   }

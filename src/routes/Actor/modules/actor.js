@@ -54,6 +54,7 @@ const ACTION_HANDLERS = {
 const initialState = {
   name: ''
   , gender: ''
+  , directors: []
   , movies: []
 };
 

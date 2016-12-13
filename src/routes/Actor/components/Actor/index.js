@@ -3,6 +3,7 @@ import React from 'react'
 //import actorData from '../../sample-data';
 
 import PageHeader from './header';
+import Directors from './directors';
 import Roles from './roles';
 
 const Actor = React.createClass({
@@ -13,10 +14,11 @@ const Actor = React.createClass({
   }
   
   , render() {
-    const {name, gender, movies} = this.props;
+    const {name, gender, directors, movies} = this.props;
     return (
       <div style={{ margin: '1 auto' }} >
         <PageHeader name={name} gender={gender} />
+        <Directors directors={directors} />
         <Roles movies={movies} />
       </div>
     );

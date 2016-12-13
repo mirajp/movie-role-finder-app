@@ -19,6 +19,7 @@ const mapDispatchToProps = {
 const mapStateToProps = (state) => ({
   name: state.actor.name
   , gender: state.actor.gender
+  , directors: state.actor.directors
   , movies: state.actor.movies
 })
 

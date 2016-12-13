@@ -38,6 +38,7 @@ const Roles = React.createClass({
 
     return (
       <div className="actor roles">
+        <h3>Actor's Roles</h3>
         <Table style={{tableLayout: 'auto'}}>
           <TableBody displayRowCheckbox={false}>
             <RolesHeader/>
@@ -51,5 +52,3 @@ const Roles = React.createClass({
 
 
 export default Roles;
-
-
