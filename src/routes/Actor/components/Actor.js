@@ -27,7 +27,7 @@ const tableData = [
   }
 ];
 
-export const Counter = React.createClass({
+export const Actor = React.createClass({
   render() {
     return (
       <div style={{ margin: '1 auto' }} >
@@ -79,10 +79,10 @@ export const Counter = React.createClass({
   }
 });
 
-Counter.propTypes = {
+Actor.propTypes = {
   counter     : React.PropTypes.number.isRequired,
   doubleAsync : React.PropTypes.func.isRequired,
   increment   : React.PropTypes.func.isRequired
 }
 
-export default Counter
+export default Actor
