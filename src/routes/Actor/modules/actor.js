@@ -1,15 +1,19 @@
+import request from 'superagent';
+
 // ------------------------------------
 // Constants
 // ------------------------------------
-export const COUNTER_INCREMENT = 'COUNTER_INCREMENT'
+export const SET_ACTOR_DATA = 'SET_ACTOR_DATA'
 
 // ------------------------------------
 // Actions
 // ------------------------------------
-export function increment (value = 1) {
+export function setActorData (actorData = {}) {
   return {
-    type    : COUNTER_INCREMENT,
-    payload : value
+    type    : SET_ACTOR_DATA,
+    payload : {
+      actorData
+    }
   }
 }
 
@@ -21,34 +25,39 @@ export function increment (value = 1) {
     you'd probably want to dispatch an action of COUNTER_DOUBLE and let the
     reducer take care of this logic.  */
 
-export const doubleAsync = () => {
+export const fetchActorData = (actorId) => {
   return (dispatch, getState) => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        dispatch(increment(getState().counter))
-        resolve()
-      }, 200)
-    })
-  }
+    request
+      .get(`http://movieroles.ml:3001/actor/${actorId}`)
+      .end((err, res) => {
+        const actorData = res.body;
+        dispatch(setActorData(actorData));
+      });
+  };
 }
 
 export const actions = {
-  increment,
-  doubleAsync
+  setActorData,
+  fetchActorData
 }
 
 // ------------------------------------
 // Action Handlers
 // ------------------------------------
 const ACTION_HANDLERS = {
-  [COUNTER_INCREMENT] : (state, action) => state + action.payload
+  [SET_ACTOR_DATA] : (state, action) => (Object.assign({}, state, action.payload.actorData))
 }
 
 // ------------------------------------
 // Reducer
 // ------------------------------------
-const initialState = 0
-export default function counterReducer (state = initialState, action) {
+const initialState = {
+  name: ''
+  , gender: ''
+  , movies: []
+};
+
+export default function actorReducer(state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type]
 
   return handler ? handler(state, action) : state

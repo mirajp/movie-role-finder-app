@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { increment, doubleAsync } from '../modules/actor'
+import { fetchActorData } from '../modules/actor'
 
 /*  This is a container component. Notice it does not contain any JSX,
     nor does it import React. This component is **only** responsible for
@@ -13,12 +13,13 @@ import Actor from '../components/Actor'
     implementing our wrapper around increment; the component doesn't care   */
 
 const mapDispatchToProps = {
-  increment : () => increment(1),
-  doubleAsync
+  fetchActorData
 }
 
 const mapStateToProps = (state) => ({
-  counter : state.counter
+  name: state.actor.name
+  , gender: state.actor.gender
+  , movies: state.actor.movies
 })
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors, ie:
@@ -35,4 +36,4 @@ const mapStateToProps = (state) => ({
     Selectors are composable. They can be used as input to other selectors.
     https://github.com/reactjs/reselect    */
 
-export default connect(mapStateToProps, mapDispatchToProps)(Actor)
+export default connect(mapStateToProps, mapDispatchToProps)(Actor);
