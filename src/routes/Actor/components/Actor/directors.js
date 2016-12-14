@@ -15,6 +15,7 @@ const Directors = React.createClass({
       <div className="actor directors" id="content">
         <h3>Actor's Directors</h3>
         <div className="columns">
+      {/*<ul style={{listStyleType: "none"}}>*/}
           <ul>
             {directorListItems}
           </ul>
