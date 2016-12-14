@@ -1,6 +1,6 @@
 import React from 'react'
 import {IndexLink, Link} from 'react-router'
-import './directors.scss'
+//import './directors.scss'
 
 const Directors = React.createClass({
   render() {
@@ -15,7 +15,7 @@ const Directors = React.createClass({
       <div className="movie directors" id="content">
         <h3>The Director(s)</h3>
         <div className="columns">
-          <ul>
+          <ul style={{listStyleType: "none"}}>
             {directorListItems}
           </ul>
         </div>
