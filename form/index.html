@@ -1,0 +1,64 @@
+
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="movies.js"></script>
+
+</head>
+
+<body>
+   
+
+
+<h1> Cast Yourself in a Movie!</h1>
+<h2>Select a genre</h2>
+
+<form action="javascript:selectGenre();">
+
+<select id="mydropdown">
+<option value="Horror">Horror</option>
+<option value="Sci-fi">Sci-fi</option>
+<option value="Short">Short</option>
+<option value="Thriller">Thriller</option>
+<option value="Comedy">Comedy</option>
+<option value="Drama">Drama</option>
+<option value="Music">Music</option>
+<option value="Action">Action</option>
+<option value="Adventure">Adventure</option>
+<option value="Fantasy">Fantasy</option>
+<option value="Romance">Romance</option>
+<option value="Animation">Animation</option>
+<option value="Family">Family</option>
+<option value="Musical">Musical</option>
+<option value="Mystery">Mystery</option>
+<option value="Western">Western</option>
+<option value="History">History</option>
+<option value="Sport">Sport</option>
+<option value="Crime">Crime</option>
+<option value="War">War</option>
+<option value="Biography">Biography</option>
+<option value="Documentary">Documentary</option>
+<option value="Film-Noir">Film-Noir</option>
+
+</select>
+  <input type="submit">
+</form>
+
+<br><br>
+
+
+  
+<table style="width: 100%" id="resultsTable">
+     <thead align="left">
+          <tr>
+               <th>Name</th>
+               <th>Role</th>
+               <th>Movie</th>
+           </tr>
+     </thead>
+     <tbody id="theTable">
+     </tbody>
+  </table>
+
+ 
+</body>
