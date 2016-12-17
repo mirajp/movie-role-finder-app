@@ -11,9 +11,11 @@ function selectGenre() {
     var budget = document.querySelector('input[name="pay"]:checked').value;
     var duration = document.querySelector('input[name="duration"]:checked').value
     var gender = document.querySelector('input[name="gender"]:checked').value;
-    console.log(duration);
+    var rating = document.querySelector('input[name="rating"]:checked').value;
     
-    fetch(database_url + 'query/' + genre + '/' + budget + '/' + duration + '/' + gender)
+        
+    
+    fetch(database_url + 'query/' + genre + '/' + budget + '/' + duration + '/' + gender + '/' + rating)
         .then(data => data.json())
         .then(data => displayData(data));
 }
