@@ -6,10 +6,14 @@ base_url = "http://localhost:3000/";
 database_url = "http://localhost:3001/";
 
 function selectGenre() {
-
     var e = document.getElementById("mydropdown");
-    var selected = e.options[e.selectedIndex].value;
-    fetch(database_url + 'actorByGenre/' + selected)
+    var genre = e.options[e.selectedIndex].value;
+    var budget = document.querySelector('input[name="pay"]:checked').value;
+    var duration = document.querySelector('input[name="duration"]:checked').value
+    var gender = document.querySelector('input[name="gender"]:checked').value;
+    console.log(duration);
+    
+    fetch(database_url + 'query/' + genre + '/' + budget + '/' + duration + '/' + gender)
         .then(data => data.json())
         .then(data => displayData(data));
 }
@@ -30,4 +34,3 @@ function displayData(data) {
         
     }
 }
-
