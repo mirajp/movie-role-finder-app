@@ -5,10 +5,10 @@ import './HomeView.scss'
 export const HomeView = () => (
   <div>
     <h4>Welcome!</h4>
-    <img
+    <a href="http://movieroles.ddns.net:8000"  target="_self"><img
       alt='This is a duck, because Redux!'
       className='duck'
-      src={DuckImage} />
+      src={DuckImage} /></a>
   </div>
 )
 

@@ -11,10 +11,11 @@ export const Header = () => (
       Home
     </IndexLink>
     {' · '}
-    <Link to='/counter' activeClassName='route--active'>
-      Counter
+     */
+    <Link to='http://movieroles.ddns.net:8000/'>
+      Home
     </Link>
-    */}
+    }
   </div>
 )
 

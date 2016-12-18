@@ -14,10 +14,10 @@ const Actor = React.createClass({
   }
   
   , render() {
-    const {name, gender, directors, movies} = this.props;
+      const {name, gender, directors, movies, imgurl} = this.props;
     return (
       <div style={{ margin: '1 auto' }} >
-        <PageHeader name={name} gender={gender} />
+            <PageHeader name={name} gender={gender} imgurl={imgurl} />
         <Directors directors={directors} />
         <Roles movies={movies} />
       </div>

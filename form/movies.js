@@ -1,6 +1,6 @@
 
 /* URL where the react project is being served... */
-base_url = "http://movieroles.ml:3000/";
+base_url = "http://movieroles.ddns.net:3000/";
 
 /* Database URL */
 database_url = "http://movieroles.ddns.net:3001/";

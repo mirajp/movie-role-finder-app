@@ -28,7 +28,7 @@ export function setActorData (actorData = {}) {
 export const fetchActorData = (actorId) => {
   return (dispatch, getState) => {
     request
-      .get(`http://movieroles.ml:3001/actor/${actorId}`)
+      .get(`http://movieroles.ddns.net:3001/actor/${actorId}`)
       .end((err, res) => {
         const actorData = res.body;
         dispatch(setActorData(actorData));
@@ -56,6 +56,7 @@ const initialState = {
   , gender: ''
   , directors: []
   , movies: []
+    , imgurl: ''
 };
 
 export default function actorReducer(state = initialState, action) {

@@ -21,6 +21,7 @@ const mapStateToProps = (state) => ({
   , gender: state.actor.gender
   , directors: state.actor.directors
   , movies: state.actor.movies
+    , imgurl: state.actor.imgurl
 })
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors, ie:
