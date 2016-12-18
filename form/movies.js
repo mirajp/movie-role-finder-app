@@ -35,4 +35,5 @@ function displayData(data) {
         row.cells[2].innerHTML =  '<a href="' + base_url + 'movie/' + data[i].mID + '">' + data[i].mname + '</a>'
         
     }
+    document.getElementById("numResults").innerHTML = data.length + " results for last query.";
 }
