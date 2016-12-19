@@ -1,9 +1,11 @@
 
 /* URL where the react project is being served... */
-base_url = "http://movieroles.ddns.net:3000/";
+//base_url = "http://movieroles.ddns.net:3000/";
+base_url = "http://movieroles.ml:3000/";
 
 /* Database URL */
-database_url = "http://movieroles.ddns.net:3001/";
+//database_url = "http://movieroles.ddns.net:3001/";
+database_url = "http://movieroles.ml:3001/";
 
 function selectGenre() {
     var e = document.getElementById("mydropdown");

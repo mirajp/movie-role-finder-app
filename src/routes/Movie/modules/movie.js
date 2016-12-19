@@ -28,7 +28,7 @@ export function setMovieData (movieData = {}) {
 export const fetchMovieData = (movieId) => {
   return (dispatch, getState) => {
     request
-      .get(`http://movieroles.ddns.net:3001/movie/${movieId}`)
+      .get(`http://movieroles.ml:3001/movie/${movieId}`)
       .end((err, res) => {
         const movieData = res.body;
         dispatch(setMovieData(movieData));

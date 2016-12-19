@@ -12,9 +12,9 @@ export const Header = () => (
     </IndexLink>
     {' · '}
      */
-    <Link to='http://movieroles.ddns.net:8000/'>
+    <a href='http://movieroles.ml:8000/'>
       Home
-    </Link>
+    </a>
     }
   </div>
 )

@@ -28,7 +28,7 @@ export function setDirectorData (directorData = {}) {
 export const fetchDirectorData = (directorId) => {
   return (dispatch, getState) => {
     request
-      .get(`http://movieroles.ddns.net:3001/director/${directorId}`)
+      .get(`http://movieroles.ml:3001/director/${directorId}`)
       .end((err, res) => {
         const directorData = res.body;
         dispatch(setDirectorData(directorData));
