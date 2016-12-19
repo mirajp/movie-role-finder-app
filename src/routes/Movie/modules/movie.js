@@ -55,6 +55,7 @@ const initialState = {
   movie: {}
   , actors: []
   , directors: []
+  , genres: []
 };
 
 export default function movieReducer(state = initialState, action) {

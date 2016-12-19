@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* http://techneblog.com/article/creating-responsive-multiple-column-list */
+
+#content {
+    font-size: 1.15em;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; /*auto centers the container */
+    padding: 1%;
+}
+
+/*CSS3 multiple columns.*/
+/* Get em size for colums: 184/16 */   
+.columns {   
+    -moz-column-width: 10.5em; /* Firefox */
+    -webkit-column-width: 10.5em; /* webkit, Safari, Chrome */
+    column-width: 10.5em;
+    column-fill: all;
+}
+
+/*remove standard list and bullet formatting from ul*/
+.columns ul {
+    //margin: 0;
+    //padding: 0;
+    list-style-type: none;
+}
+
+/* correct webkit/chrome uneven margin on the first column*/
+.columns ul li:first-child {
+    margin-top:3px;
+}

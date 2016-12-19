@@ -4,6 +4,7 @@ import React from 'react'
 
 import PageHeader from './header';
 import Actors from './actors';
+import Genres from './genres';
 import Directors from './directors';
 
 const Movie = React.createClass({
@@ -14,10 +15,11 @@ const Movie = React.createClass({
   }
   
   , render() {
-    const {movie, actors, directors} = this.props;
+    const {movie, actors, genres, directors} = this.props;
     return (
       <div style={{ margin: '1 auto' }} >
         <PageHeader movie={movie} />
+        <Genres genres={genres} />
         <Directors directors={directors} />
         <Actors actors={actors} />
       </div>

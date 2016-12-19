@@ -19,6 +19,7 @@ const mapDispatchToProps = {
 const mapStateToProps = (state) => ({
   movie: state.movie
   , actors: state.movie.actors
+  , genres: state.movie.genres
   , directors: state.movie.directors
 })
 
