@@ -26,3 +26,4 @@ const Actor = React.createClass({
 });
 
 export default Actor
+
