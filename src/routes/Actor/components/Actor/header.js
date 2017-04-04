@@ -14,4 +14,3 @@ const Header = React.createClass({
 
 
 export default Header;
-
