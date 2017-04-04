@@ -39,3 +39,4 @@ const mapStateToProps = (state) => ({
     https://github.com/reactjs/reselect    */
 
 export default connect(mapStateToProps, mapDispatchToProps)(Actor);
+
